@@ -1,7 +1,23 @@
 import 'package:flutter/material.dart';
 
+String shortHandFunction() => "Hello i'm Shorty";
+
+void conditionalStatements() {
+  const name = "Mahi";
+  if (name == "Mahi") {
+    print("you are Mahi");
+  } else {
+    print("you aren't Mahi");
+  }
+}
+
 void main() {
   runApp(const MyApp());
+}
+
+void test() {
+  print(shortHandFunction());
+  conditionalStatements();
 }
 
 class MyApp extends StatelessWidget {
@@ -10,6 +26,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
