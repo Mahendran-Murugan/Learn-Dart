@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 
 String shortHandFunction() => "Hello i'm Shorty";
 
+void listInDart() {
+  final list = [10, 20, 30];
+  final foo = list[1];
+  print("The 1st index is: $foo");
+  final size = list.length;
+  print("The size is: $size");
+}
+
 void conditionalStatements() {
   const name = "Mahi";
   if (name == "Mahi") {
@@ -18,6 +26,7 @@ void main() {
 void test() {
   print(shortHandFunction());
   conditionalStatements();
+  listInDart();
 }
 
 class MyApp extends StatelessWidget {
