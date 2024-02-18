@@ -9,6 +9,8 @@ class Species {
 
   Species(this.name);
 
+  factory Species.cat() => Species('Cat');
+
   void run() {
     print('${this.name} is Running');
   }
@@ -117,6 +119,9 @@ void test() {
   final human = Species("Human");
   human.run();
   human.sleep();
+  final cat = Species.cat();
+  cat.run();
+  cat.sleep();
 }
 
 class MyApp extends StatelessWidget {
