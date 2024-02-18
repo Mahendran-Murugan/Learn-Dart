@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 String shortHandFunction() => "Hello i'm Shorty";
 
+void conditionalInvokation() {
+  List<String>? greet = null;
+  // print(greet.length); It cause error
+  print(greet?.length); // No error
+}
+
 void nullSafty() {
   // const String name = null; this cause error
   String? name = null;
@@ -61,6 +67,7 @@ void test() {
   listInDart();
   mapInDart();
   nullSafty();
+  conditionalInvokation();
 }
 
 class MyApp extends StatelessWidget {
