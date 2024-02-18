@@ -8,6 +8,23 @@ void nullSafty() {
   print('Name is $name');
   name ??= 'Foo';
   print('Name is $name');
+  List<String>? names = ['Mahi']; // This means list can be null
+  print(names);
+  names = null;
+  List<String?> cities = [
+    'kovai',
+    'thirchy',
+    null
+  ]; // This means list item can be null
+  print(cities);
+  List<String?>? anim = [
+    'aot',
+    'naruto',
+    'op'
+  ]; // Both list and items can be null
+  print(anim);
+  anim[2] = null;
+  anim = null;
 }
 
 void mapInDart() {
