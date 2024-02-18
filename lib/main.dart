@@ -6,7 +6,7 @@ void nullSafty() {
   // const String name = null; this cause error
   String? name = null;
   print('Name is $name');
-  name ??= 'Foo';
+  name ??= 'Foo'; // only assign if it is a null
   print('Name is $name');
   List<String>? names = ['Mahi']; // This means list can be null
   print(names);
