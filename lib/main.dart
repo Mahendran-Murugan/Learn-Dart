@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+enum Personal { name, age, food }
+
+void useEnum() {
+  print(Personal.name);
+  print(Personal.name.name);
+}
+
 String shortHandFunction() => "Hello i'm Shorty";
 
 void checkNullAndStoreValue() {
@@ -75,6 +82,7 @@ void test() {
   nullSafty();
   conditionalIncokation();
   checkNullAndStoreValue();
+  useEnum();
 }
 
 class MyApp extends StatelessWidget {
