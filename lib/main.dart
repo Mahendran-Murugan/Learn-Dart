@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 
 String shortHandFunction() => "Hello i'm Shorty";
 
+void nullSafty() {
+  // const String name = null; this cause error
+  String? name = null;
+  print('Name is $name');
+  name ??= 'Foo';
+  print('Name is $name');
+}
+
 void mapInDart() {
   var map = {'Name': 'Mahendran', 'Age': 19};
   map['Name'] = 'Mahendran M';
@@ -35,6 +43,7 @@ void test() {
   conditionalStatements();
   listInDart();
   mapInDart();
+  nullSafty();
 }
 
 class MyApp extends StatelessWidget {
