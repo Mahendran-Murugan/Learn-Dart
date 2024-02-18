@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 String shortHandFunction() => "Hello i'm Shorty";
 
+void checkNullAndStoreValue() {
+  List<String>? list = null;
+  var length = list?.length ?? 0; //This means if it null store zero
+  print(length);
+}
+
 void conditionalIncokation() {
   List<String>? greet = null;
   // print(greet.length); It cause error
@@ -68,6 +74,7 @@ void test() {
   mapInDart();
   nullSafty();
   conditionalIncokation();
+  checkNullAndStoreValue();
 }
 
 class MyApp extends StatelessWidget {
