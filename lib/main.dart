@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 String shortHandFunction() => "Hello i'm Shorty";
 
+void mapInDart() {
+  var map = {'Name': 'Mahendran', 'Age': 19};
+  map['Name'] = 'Mahendran M';
+  print("${map['Name']} is ${map['Age']} years old.");
+}
+
 void listInDart() {
   final list = [10, 20, 30];
   final foo = list[1];
@@ -27,6 +33,7 @@ void test() {
   print(shortHandFunction());
   conditionalStatements();
   listInDart();
+  mapInDart();
 }
 
 class MyApp extends StatelessWidget {
