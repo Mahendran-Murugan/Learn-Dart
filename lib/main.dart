@@ -2,6 +2,22 @@ import 'package:flutter/material.dart';
 
 enum Personal { name, age, food }
 
+enum Animal { cat, dog, human }
+
+void useEnumWithSwitch(Animal ani) {
+  switch (ani) {
+    case Animal.cat:
+      print("It's Cat");
+    case Animal.dog:
+      print("It's Dog");
+    case Animal.human:
+      print("It's Human");
+    default:
+      print("Unidentified");
+  }
+  print("Executed..");
+}
+
 void useEnum() {
   print(Personal.name);
   print(Personal.name.name);
@@ -83,6 +99,7 @@ void test() {
   conditionalIncokation();
   checkNullAndStoreValue();
   useEnum();
+  useEnumWithSwitch(Animal.cat);
 }
 
 class MyApp extends StatelessWidget {
