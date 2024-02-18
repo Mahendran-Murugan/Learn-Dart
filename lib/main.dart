@@ -4,6 +4,20 @@ enum Personal { name, age, food }
 
 enum Animal { cat, dog, human }
 
+class Species {
+  final name;
+
+  Species(this.name);
+
+  void run() {
+    print('${this.name} is Running');
+  }
+
+  void sleep() {
+    print('${this.name} is Sleeping');
+  }
+}
+
 void useEnumWithSwitch(Animal ani) {
   switch (ani) {
     case Animal.cat:
@@ -100,6 +114,9 @@ void test() {
   checkNullAndStoreValue();
   useEnum();
   useEnumWithSwitch(Animal.cat);
+  final human = Species("Human");
+  human.run();
+  human.sleep();
 }
 
 class MyApp extends StatelessWidget {
