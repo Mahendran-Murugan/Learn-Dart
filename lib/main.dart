@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 String shortHandFunction() => "Hello i'm Shorty";
 
-void conditionalInvokation() {
+void conditionalIncokation() {
   List<String>? greet = null;
   // print(greet.length); It cause error
   print(greet?.length); // No error
@@ -67,7 +67,7 @@ void test() {
   listInDart();
   mapInDart();
   nullSafty();
-  conditionalInvokation();
+  conditionalIncokation();
 }
 
 class MyApp extends StatelessWidget {
