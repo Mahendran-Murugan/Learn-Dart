@@ -20,6 +20,22 @@ class Species {
   }
 }
 
+class Cat {
+  final String name;
+  Cat(this.name);
+}
+
+extension Run on Cat {
+  void run() {
+    print("The Cat $name is running");
+  }
+}
+
+void extensions() {
+  final cat = Cat("meow");
+  cat.run();
+}
+
 void useEnumWithSwitch(Animal ani) {
   switch (ani) {
     case Animal.cat:
@@ -122,6 +138,7 @@ void test() {
   final cat = Species.cat();
   cat.run();
   cat.sleep();
+  extensions();
 }
 
 class MyApp extends StatelessWidget {
