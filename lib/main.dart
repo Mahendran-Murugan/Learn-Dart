@@ -4,6 +4,12 @@ enum Personal { name, age, food }
 
 enum Animal { cat, dog, human }
 
+class Value<A, B> {
+  final A val1;
+  final B val2;
+  Value(this.val1, this.val2);
+}
+
 Stream<String> getName() {
   return Stream.periodic(const Duration(seconds: 60), (value) {
     return 'Foo';
@@ -14,6 +20,13 @@ Iterable<int> getNo() sync* {
   yield 1;
   yield 2;
   yield 3;
+}
+
+void GenericClass() {
+  final val = Value("Mahi", 4507);
+  print(val.val1);
+  final val2 = Value(45, "4507");
+  print(val2.val1);
 }
 
 void testGenerator() {
@@ -177,6 +190,7 @@ void test() {
   asynchronousFunc();
   testStream();
   testGenerator();
+  GenericClass();
 }
 
 class MyApp extends StatelessWidget {
