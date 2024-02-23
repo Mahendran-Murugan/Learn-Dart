@@ -5,9 +5,21 @@ enum Personal { name, age, food }
 enum Animal { cat, dog, human }
 
 Stream<String> getName() {
-  return Stream.periodic(const Duration(seconds: 1), (value) {
+  return Stream.periodic(const Duration(seconds: 60), (value) {
     return 'Foo';
   });
+}
+
+Iterable<int> getNo() sync* {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+void testGenerator() {
+  for (final val in getNo()) {
+    print(val);
+  }
 }
 
 void testStream() async {
@@ -164,6 +176,7 @@ void test() {
   extensions();
   asynchronousFunc();
   testStream();
+  testGenerator();
 }
 
 class MyApp extends StatelessWidget {
