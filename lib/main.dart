@@ -4,6 +4,19 @@ enum Personal { name, age, food }
 
 enum Animal { cat, dog, human }
 
+Stream<String> getName() {
+  return Stream.periodic(const Duration(seconds: 1), (value) {
+    return 'Foo';
+  });
+}
+
+void testStream() async {
+  await for (final value in getName()) {
+    print(value);
+  }
+  print("Stream Finished");
+}
+
 Future<int> multiplyByTwo(int a) {
   return Future.delayed(const Duration(seconds: 3), () {
     return a * 2;
@@ -150,6 +163,7 @@ void test() {
   cat.sleep();
   extensions();
   asynchronousFunc();
+  testStream();
 }
 
 class MyApp extends StatelessWidget {
