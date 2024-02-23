@@ -4,6 +4,12 @@ enum Personal { name, age, food }
 
 enum Animal { cat, dog, human }
 
+Future<int> multiplyByTwo(int a) {
+  return Future.delayed(const Duration(seconds: 3), () {
+    return a * 2;
+  });
+}
+
 class Species {
   final name;
 
@@ -34,6 +40,10 @@ extension Run on Cat {
 void extensions() {
   final cat = Cat("meow");
   cat.run();
+}
+
+void asynchronousFunc() async {
+  print(await multiplyByTwo(10));
 }
 
 void useEnumWithSwitch(Animal ani) {
@@ -139,6 +149,7 @@ void test() {
   cat.run();
   cat.sleep();
   extensions();
+  asynchronousFunc();
 }
 
 class MyApp extends StatelessWidget {
@@ -166,7 +177,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
